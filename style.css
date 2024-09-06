@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    font-family: "Roboto Slab", serif;
+    background: #222;
+}
+
+header {
+    width: 100%;
+    height: 76px;
+    background: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 0 50px;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.menu {
+    width: 65%;
+    display: flex;
+    justify-content: right;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.content h3 {
+    margin-top: 100px;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.menu li a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    margin-right: 40px;
+    position: relative;
+    transition: 0.1s ease;
+    font-family: "Roboto Slab", serif;
+}
+
+.menu li a:hover {
+    color: #f5004f;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    background-color: #f5004f;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+.search form {
+    display: flex;
+    margin: 0;
+}
+
+.search input {
+    width: 100%;
+    height: 40px;
+    padding: 0 40px 0 10px;
+    border-radius: 25px;
+    border: 0px solid #f5004f;
+    font-size: 16px;
+    outline: none;
+}
+
+.search i {
+    position: absolute;
+    width: 9%;
+    right: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f5004f;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+section .content {
+    color: white;
+    position: relative;
+    top: 10%;
+    margin-top: 90px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically */
+    align-items: flex-start;
+    /* Align items to the start of the container */
+    justify-content: center;
+    /* Center items vertically */
+    position: relative;
+    top: 10%;
+    color: white;
+    padding-left: 25px;
+    /* Add padding to the left for overall alignment */
+}
+
+.main h1 {
+    font-size: 55px;
+    color: white;
+    margin-top: 120px;
+    left: 20px;
+}
+
+.main h1 span {
+    color: #f5004f;
+    /* Color for the span inside h1 */
+}
+
+.main p {
+    width: 650px;
+    text-align: justify;
+    line-height: 22px;
+    margin-top: 20px;
+    /* Add margin-bottom for spacing below the p element */
+}
+
+.main-btn {
+    color: blue;
+}
+
+.deal2 .btn {
+    position: relative;
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    left: 25px;
+    margin-top: 70px;
+    display: flex;
+    background: #f5004f;
+    width: 120px;
+    height: 45px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: "Roboto Slab", serif;
+}
+
+.deal2 .btn-1 {
+    position: relative;
+    border-radius: 3px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    left: 25px;
+    margin-top: 100px;
+    display: flex;
+    background: #f5004f;
+    width: 130px;
+    height: 45px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: "Roboto Slab", serif;
+}
+
+.deal2 .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.deal2 .btn:active {
+    transform: scale(0.9);
+}
+
+.book-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+
+.book {
+    width: 140px;
+    background: lightskyblue;
+    border: 1px solid #2222;
+    border-radius: 5px;
+    padding: 1rem;
+    /* flex: 1 1 calc(15% - 2rem); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.book img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease-out;
+}
+
+.book img:hover {
+    transform: scale(1.2);
+}
+
+.book h2 {
+    font-size: 14px;
+    margin: 0.5rem 0;
+    font-family: "Roboto Slab", serif;
+}
+
+.book p {
+    color: #f5004f;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.contianer .book1 {
+    width: 120px;
+}
+
+.book-btn {
+    width: 80%;
+    padding-left: 25px;
+    margin-top: 30px;
+}
+
+.buy-btn {
+    width: 100px;
+    height: 40px;
+    background-color: #f5004f;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.buy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s;
+    z-index: 0;
+}
+
+.buy-btn:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.price {
+    font-size: 15px;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+
+/* General footer styling */
+
+footer {
+    background-color: black;
+    color: #ecf0f1;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-left h3,
+.footer-center h3,
+.footer-right h3 {
+    color: #ecf0f1;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-left p,
+.footer-center p,
+.footer-right p {
+    color: #bdc3c7;
+    font-size: 14px;
+}
+
+.footer-center p {
+    margin: 5px 0;
+}
+
+.footer-right ul.socials {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-right ul.socials li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-right ul.socials li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-right ul.socials li a:hover {
+    color: #3498db;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #34495e;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.navbar .active a {
+    color: #f5004f;
+    /* Change text color for the active link */
+    font-weight: bold;
+    /* Make the text bold */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+
+/* Optional: Style for the regular links */
+
+.navbar a {
+    text-decoration: none;
+    /* Ensure no underline for all links */
+    color: #333;
+    /* Default color */
+}
+
+.navbar a:hover {
+    color: #3933f1;
+    /* Hover color */
+}
+
+
+/* bout page */
+
+
+/* General styles for the about section */
+
+.about {
+    padding: 4rem 2rem;
+    background: linear-gradient(to right, #ffffff, #f9f9f9);
+    text-align: center;
+    margin: 100px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+
+/* Styling for the heading in the about section */
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+
+/* Hover effect for the heading */
+
+.about h1:hover {
+    color: #007bff;
+}
+
+
+/* Styling for the paragraph text in the about section */
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+
+/* Keyframes for fade-in animation */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-bottom a {
+    color: #f5004f;
+}
+
+.footer-bottom a:hover {
+    color: #3933f1;
+}

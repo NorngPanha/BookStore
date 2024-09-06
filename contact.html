@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Bookstore☆</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Container for both map and contact sections */
+        
+        .contact-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            /* Adjusted for wider layout */
+            padding: 1rem;
+        }
+        /* Styling for the map container */
+        
+        .map-container {
+            flex: 1;
+            /* Takes up remaining space */
+            text-align: center;
+        }
+        
+        .map-container h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .map-container iframe {
+            border: 0;
+            border-radius: 8px;
+            width: 100%;
+            height: 400px;
+        }
+        /* Styling for the contact section */
+        
+        .contact {
+            flex: 1;
+            /* Takes up remaining space */
+            background-color: #f9f9f9;
+            padding: 2rem 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-container {
+            max-width: 600px;
+            /* Adjust to fit content width */
+            margin: 0 auto;
+        }
+        
+        .contact h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact label {
+            font-size: 1rem;
+        }
+        
+        .contact input,
+        .contact textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        
+        .contact button {
+            align-self: center;
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .contact button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">Bookstore☆</div>
+        <ul class="menu">
+            <li><a href="index.html" id="homeLink">Home</a></li>
+            <li><a href="upcoming.html" id="upcomingLink">Up Coming</a></li>
+            <li><a href="about.html" id="aboutLink">About</a></li>
+            <li class="active"><a href="contact.html" id="contactLink">Contact</a></li>
+        </ul>
+        <div class="search">
+            <form>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <i class="material-icons">search</i>
+            </form>
+        </div>
+    </header>
+    <br><br>
+
+    <div class="contact-wrapper">
+        <!-- Google Maps Embed -->
+        <div class="map-container">
+            <h2 style="color: #fff;">Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.910018839568!2d104.8685104741725!3d11.558308088642029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951b83795d97b%3A0x735f8f7a3e5bc507!2sThe%20University%20of%20Cambodia!5e0!3m2!1sen!2sus!4v1725520852566!5m2!1sen!2sus"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+        <!-- Contact Form -->
+        <section class="contact">
+            <div class="contact-container">
+                <h1>Contact Us</h1>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Row 1: About Us -->
+            <div class="footer-row footer-left">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing top-notch services and products. Our team works hard to ensure your satisfaction.</p>
+            </div>
+
+            <!-- Row 2: Contact Information -->
+            <div class="footer-row footer-center">
+                <h3>Contact Information</h3>
+                <p><strong>Address:</strong> Phnom Penh, CAMBODIA</p>
+                <p><strong>Email:</strong> Norngpanha2004@gmail.com</p>
+                <p><strong>Phone:</strong> +855 10841320</p>
+            </div>
+
+            <!-- Row 3: Follow Us -->
+            <div class="footer-row footer-right">
+                <h3>Follow Us</h3>
+                <ul class="socials">
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>All rights reserved. &copy; 2024 <a href="#">Bookstore☆</a>.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
